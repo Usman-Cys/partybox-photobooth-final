@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Photobooth" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/pink_primary</item>
+        <item name="colorOnPrimary">@color/pink_on_primary</item>
+        <item name="colorPrimaryContainer">@color/pink_primary_dark</item>
+        <item name="android:statusBarColor">@color/screen_bg</item>
+        <item name="android:navigationBarColor">@color/screen_bg</item>
+        <item name="android:windowBackground">@color/screen_bg</item>
+        <item name="materialButtonStyle">@style/Widget.Photobooth.Button.Pink</item>
+    </style>
+
+    <style name="Widget.Photobooth.Button.Pink" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/pink_primary</item>
+        <item name="android:textColor">@color/pink_on_primary</item>
+    </style>
+</resources>
