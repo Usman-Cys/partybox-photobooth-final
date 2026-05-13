@@ -26,7 +26,7 @@ object PrinterProtocol {
     fun imgiFrame(): ByteArray = buildFrame(0x02, 0x01) { frame ->
         val bytes = "print_1.jpg".toByteArray(Charsets.US_ASCII)
         val len = 8.coerceAtMost(bytes.size)
-        bytes.copyInto(frame, destinationOffset = 8, endIndex = len)
+        bytes.copyInto(destination = frame, destinationOffset = 8, startIndex = 0, endIndex = len)
     }
 
     fun prrqFrame(copies: Int): ByteArray = buildFrame(0x02, 0x00) { frame ->

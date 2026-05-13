@@ -192,13 +192,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun requiredPermissions(): List<String> {
         val perms = mutableListOf(Manifest.permission.CAMERA)
-        if (Build.VERSION.SDK_INT <= 32) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.S_V2) {
             perms += Manifest.permission.READ_EXTERNAL_STORAGE
         }
-        if (Build.VERSION.SDK_INT == 29) {
+        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q) {
             perms += Manifest.permission.WRITE_EXTERNAL_STORAGE
         }
-        if (Build.VERSION.SDK_INT >= 33) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             perms += Manifest.permission.READ_MEDIA_IMAGES
         }
         return perms
