@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         cameraProviderFuture.addListener({
             val cameraProvider = cameraProviderFuture.get()
             val preview = Preview.Builder().build().also {
-                it.surfaceProvider = binding.previewView.surfaceProvider
+                it.setSurfaceProvider(binding.previewView.surfaceProvider)
             }
 
             imageCapture = ImageCapture.Builder().build()
