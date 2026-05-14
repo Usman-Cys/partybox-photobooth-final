@@ -8,7 +8,11 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.photobooth"
+        // NOTE: applicationId controls the installed package name on-device.
+        // Some target tablets ship with a preinstalled/locked app using "com.photobooth",
+        // which can cause INSTALL_FAILED_UPDATE_INCOMPATIBLE / VERSION_DOWNGRADE errors.
+        // Use a unique applicationId for our app.
+        applicationId = "com.partybox.photobooth"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
